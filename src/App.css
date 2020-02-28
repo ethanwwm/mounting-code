@@ -1,38 +1,51 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Manrope;
+  src: url("./assets/fonts/Manrope-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Manrope;
+  font-weight: light;
+  src: url("./assets/fonts/Manrope-Light.otf") format("opentype");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: Manrope;
+  font-weight: 500;
+  src: url("./assets/fonts/Manrope-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: Manrope;
+  font-weight: bold;
+  src: url("./assets/fonts/Manrope-Bold.otf") format("opentype");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  font-family: "Manrope";
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 2.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3 {
+  font-size: 1.25em;
+}
+
+p {
+  font-size: 1.25em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.container {
+  padding: 40px;
+  background: #419be0;
+}
+
+.slick-slide img {
+  margin: auto;
 }

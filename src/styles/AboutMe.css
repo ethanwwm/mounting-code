@@ -1,0 +1,172 @@
+h1,
+p {
+  text-align: left;
+}
+
+.about-me-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.my-portrait-banner {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: black;
+}
+
+.about-me-header {
+  position: absolute;
+  color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  cursor: default;
+  transition: color 1s;
+}
+
+.about-me-header h1:hover {
+  color: white;
+  transition: 1s ease-in-out;
+}
+
+.about-me-header h1 {
+  font-size: 34.5vw;
+}
+
+/* .my-portrait-banner img {
+  height: 100vh;
+  float: left;
+} */
+
+.text-div {
+  margin-top: 3em;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.text-div h1 {
+  margin-top: 0;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.text-div h2 {
+  font-size: 1.25em;
+  margin-top: 0;
+}
+
+.once-upon {
+  display: flex;
+  padding: 0 80px;
+  margin-bottom: 10em;
+}
+
+.section-title {
+  width: 28vw;
+}
+
+.section-description p {
+  padding-left: 80px;
+}
+
+.about-me-headline {
+  display: flex;
+  align-items: center;
+}
+
+.about-me-headline h1 {
+  text-align: left;
+  font-size: 5em;
+  color: black;
+  letter-spacing: -4px;
+}
+
+.my-info {
+  padding: 0 80px;
+  margin-top: 5em;
+}
+
+.my-info h1 {
+  font-size: 1.25em;
+  margin-bottom: 0;
+}
+
+.my-info p {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.profile-pic {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 11px;
+}
+
+.profile-pic img {
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.arrow-div-about-me {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+}
+
+.arrow-div-about-me p {
+  font-size: 1em;
+  margin: 0.5em;
+  color: white;
+  animation: bounce-3 1s infinite ease;
+}
+
+.arrow-down-about-me {
+  width: 2em;
+  animation: bounce-3 1s infinite ease;
+  animation-delay: 0.1s;
+}
+
+@media screen and (max-width: 580px) {
+  .text-div {
+    padding: 0 40px;
+  }
+
+  .once-upon {
+    padding: 0 40px;
+    flex-direction: column;
+  }
+
+  .section-description p {
+    padding-left: 0;
+  }
+
+  .section-title {
+    width: unset;
+  }
+
+  .my-info {
+    padding-left: 0;
+  }
+
+  .my-portrait-banner {
+    width: 100vw;
+  }
+
+  .text-div h1 {
+    font-size: 4em;
+  }
+}

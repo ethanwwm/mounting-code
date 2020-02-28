@@ -1,0 +1,49 @@
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  padding: 1.5em 2em;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  animation: fade-in 1s;
+  z-index: 1;
+  color: white;
+  position: fixed;
+  top: 0;
+  transition: top 0.5s;
+  transition-delay: 0.1s;
+}
+
+.logo {
+  float: left;
+  color: white;
+  cursor: pointer;
+  left: 0;
+  max-height: 7vh;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.links {
+  display: table;
+  text-align: left;
+  float: right;
+  height: 7vh;
+}
+
+.links td {
+  padding: 0 1em 0 0;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
