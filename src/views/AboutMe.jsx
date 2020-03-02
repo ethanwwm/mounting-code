@@ -25,7 +25,11 @@ const AboutMe = () => {
               }}
             >
               <p>Scroll Down</p>
-              <img src={arrowDown} className="arrow-down-about-me" />
+              <img
+                src={arrowDown}
+                className="arrow-down-about-me"
+                alt="arrow"
+              />
             </div>
           </div>
 
@@ -83,7 +87,7 @@ const AboutMe = () => {
 
               <div className="my-info">
                 <div className="profile-pic">
-                  <img src={myPortrait} />
+                  <img src={myPortrait} alt="portrait" />
                 </div>
                 <h1>Ethan Wong</h1>
                 <p>Front End Software Developer</p>

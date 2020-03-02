@@ -6,16 +6,17 @@ import faveScreenshot from "../assets/fave-screenshot.jpg";
 import oxfordScreenshot from "../assets/oxford-screenshot.jpg";
 import timescapeScreenshot from "../assets/timescape-screenshot.png";
 import Fade from "react-reveal/Fade";
+import { navigate } from "@reach/router";
+import animateScrollTo from "animated-scroll-to";
 
 let projects = [
   {
     title: "FaveBiz",
-    caption:
-      "While working at Fave Group (formerly Groupon Malaysia) in the Summer of 2019, my team and I at Fave were given the task of developing a client-side web-app that was responsive, generating large amounts of data for more than 4 million customers.",
+    caption: "An app built to boost marketing exposure and grow businesses.",
     screenshot: (
       <Fade right>
         <div className="screenshot-div">
-          <img className="screenshot" src={faveScreenshot} />
+          <img className="screenshot" src={faveScreenshot} alt="screenshot" />
         </div>
       </Fade>
     ),
@@ -29,7 +30,11 @@ let projects = [
     screenshot: (
       <Fade left>
         <div className="screenshot-div">
-          <img className="screenshot left" src={gravityScreenshot} />
+          <img
+            className="screenshot left"
+            src={gravityScreenshot}
+            alt="screenshot"
+          />
         </div>
       </Fade>
     ),
@@ -44,7 +49,7 @@ let projects = [
     screenshot: (
       <Fade right>
         <div className="screenshot-div">
-          <img className="screenshot" src={oxfordScreenshot} />
+          <img className="screenshot" src={oxfordScreenshot} alt="screenshot" />
         </div>
       </Fade>
     ),
@@ -59,7 +64,11 @@ let projects = [
     screenshot: (
       <Fade left>
         <div className="screenshot-div">
-          <img className="screenshot left" src={timescapeScreenshot} />
+          <img
+            className="screenshot left"
+            src={timescapeScreenshot}
+            alt="screenshot"
+          />
         </div>
       </Fade>
     ),
@@ -81,7 +90,26 @@ const Project = () => {
             {proj.title === "TimeScape" ? (
               <React.Fragment />
             ) : (
-              <Button text="Visit site" fill={false} link={proj.link} whiteBackground={true} />
+              <Button
+                text="Visit site"
+                fill={false}
+                link={proj.link}
+                whiteBackground={true}
+              />
+            )}
+            {proj.title === "FaveBiz" ? (
+              <div
+                onClick={() => {
+                  animateScrollTo(0);
+                  navigate("/favebiz");
+                }}
+              >
+                <div className="black-filled-button favebiz-view-more">
+                  <h3>View more</h3>
+                </div>
+              </div>
+            ) : (
+              <React.Fragment />
             )}
           </div>
         </Fade>

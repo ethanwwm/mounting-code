@@ -8,10 +8,11 @@
   overflow: hidden;
   animation: background-change 1s ease-in-out;
   animation-fill-mode: forwards;
+  /* z-index: -999; */
 }
 
 .about-me-button-div {
-  color: black;
+  color: #e11c88;
   background-color: white;
   border: 2px solid white;
   width: 11em;
@@ -22,7 +23,7 @@
 }
 
 .about-me-button-div a {
-  color: black;
+  color: #e11c88;
   text-decoration: none;
 }
 

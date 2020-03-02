@@ -1,7 +1,10 @@
 .loading-div-active {
   background-color: black;
+  position: absolute;
+  top: 0;
   height: 100vh;
   width: 100vw;
+  z-index: 100;
 }
 
 .loading-text-active {
@@ -18,10 +21,13 @@
 }
 
 .loading-div-inactive {
-  background-color: #494949;
+  background-color: black;
+  position: absolute;
+  top: 0;
   height: 100vh;
   width: 100vw;
   animation: transition-out 0.4s forwards ease-in-out;
+  z-index: 100;
 }
 
 .loading-text-inactive {

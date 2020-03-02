@@ -1,5 +1,4 @@
 import React from "react";
-import animateScrollTo from "animated-scroll-to";
 import "../styles/Footer.css";
 
 function randomNum() {
@@ -34,7 +33,10 @@ const SocialLinks = () => {
         key="linkedin"
         className="social-link"
         onClick={() => {
-          window.open("https://www.linkedin.com/in/ethan-wong-84b38952/", `${randomNum()}`);
+          window.open(
+            "https://www.linkedin.com/in/ethan-wong-84b38952/",
+            `${randomNum()}`
+          );
         }}
       >
         <div className="linkedin svg"></div>
@@ -49,6 +51,7 @@ const Footer = () => {
       <div className="social-links">
         <SocialLinks />
       </div>
+      <p className="copyright">&copy; Designed and developed by Ethan Wong</p>
     </div>
   );
 };

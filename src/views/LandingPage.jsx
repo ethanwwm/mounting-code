@@ -34,13 +34,40 @@ const LoadingScreen = ({ loading }) => {
 const ReturnLandingPage = () => {
   return (
     <React.Fragment>
+      <Values />
+      <Project />
+      <Footer />
+    </React.Fragment>
+  );
+};
+
+const LandingPage = () => {
+  const [loading, setLoading] = useState(1);
+  const [unmount, setUnmount] = useState(1);
+
+  setTimeout(() => {
+    setLoading(0);
+  }, 3000);
+
+  setTimeout(() => {
+    setUnmount(0);
+  }, 4000);
+
+  return (
+    <React.Fragment>
       <div className="landing-page-parent">
         <Fade>
-          <img src={backgroundImg} className="background-img" />
+          <img
+            src={backgroundImg}
+            className="background-img"
+            alt="background"
+          />
         </Fade>
         <Fade top cascade>
           <div>
-            <h1 className="headline">Building great sites with React.</h1>
+            <h1 className="headline">
+              Solving problems one at a time with fluid code.
+            </h1>
           </div>
           <div>
             <p className="caption">
@@ -49,7 +76,6 @@ const ReturnLandingPage = () => {
           </div>
 
           <div className="button-div">
-            {/* <Button text="Contact" link="" fill={false} /> */}
             <div className="about-me-button-div">
               <Link to="aboutme">
                 <h3>About me</h3>
@@ -64,33 +90,9 @@ const ReturnLandingPage = () => {
           }}
         >
           <p>Projects</p>
-          <img src={arrowDown} className="arrow-down" />
+          <img src={arrowDown} className="arrow-down" alt="arrow" />
         </div>
       </div>
-
-      <Values />
-
-      <Project />
-
-      <Footer />
-    </React.Fragment>
-  );
-};
-
-const LandingPage = () => {
-  const [loading, setLoading] = useState(1);
-  const [unmount, setUnmount] = useState(1);
-
-  setTimeout(() => {
-    setLoading(0);
-  }, 4000);
-
-  setTimeout(() => {
-    setUnmount(0);
-  }, 5000);
-
-  return (
-    <React.Fragment>
       {unmount ? <LoadingScreen loading={loading} /> : <ReturnLandingPage />}
     </React.Fragment>
   );
