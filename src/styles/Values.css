@@ -13,7 +13,7 @@
 .breathe {
   font-weight: 100;
   animation-delay: 1s;
-  animation: breathe 5s infinite ease-in-out;
+  animation: breathe 4s infinite ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -60,7 +60,7 @@
   }
 
   .value {
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     overflow-wrap: break-word;
     font-size: 3em;
     margin: 0;

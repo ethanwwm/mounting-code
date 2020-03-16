@@ -8,6 +8,7 @@ import timescapeScreenshot from "../assets/timescape-screenshot.png";
 import Fade from "react-reveal/Fade";
 import { navigate } from "@reach/router";
 import animateScrollTo from "animated-scroll-to";
+import { Parallax } from "react-scroll-parallax";
 
 let projects = [
   {
@@ -113,6 +114,7 @@ const Project = () => {
             )}
           </div>
         </Fade>
+
         {proj.screenshot}
       </div>
     );

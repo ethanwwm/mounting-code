@@ -9,6 +9,7 @@ import backgroundImg from "../assets/background.png";
 import arrowDown from "../assets/arrow-down.png";
 import animateScrollTo from "animated-scroll-to";
 import { Link } from "@reach/router";
+import { Parallax } from "react-scroll-parallax";
 
 const LoadingScreen = ({ loading }) => {
   if (loading)
@@ -63,26 +64,30 @@ const LandingPage = () => {
             alt="background"
           />
         </Fade>
-        <Fade top cascade>
-          <div>
-            <h1 className="headline">
-              Solving problems one at a time with fluid code.
-            </h1>
-          </div>
-          <div>
-            <p className="caption">
-              Websites and tools with a focus on scalability and responsiveness.
-            </p>
-          </div>
-
-          <div className="button-div">
-            <div className="about-me-button-div">
-              <Link to="aboutme">
-                <h3>About me</h3>
-              </Link>
+        <Parallax y={[-40, 40]}>
+          <Fade top cascade>
+            <div>
+              <h1 className="headline">
+                Solving problems one at a time with fluid code.
+              </h1>
             </div>
-          </div>
-        </Fade>
+
+            <div>
+              <p className="caption">
+                Websites and tools with a focus on scalability and
+                responsiveness.
+              </p>
+            </div>
+
+            <div className="button-div">
+              <div className="about-me-button-div">
+                <Link to="aboutme">
+                  <h3>About me</h3>
+                </Link>
+              </div>
+            </div>
+          </Fade>
+        </Parallax>
         <div
           className="arrow-div"
           onClick={() => {
