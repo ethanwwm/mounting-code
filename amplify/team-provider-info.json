@@ -1,0 +1,15 @@
+{
+    "mounting": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-mountingcode-mounting-212915-authRole",
+            "UnauthRoleArn": "arn:aws:iam::854193618465:role/amplify-mountingcode-mounting-212915-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::854193618465:role/amplify-mountingcode-mounting-212915-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-mountingcode-mounting-212915-deployment",
+            "UnauthRoleName": "amplify-mountingcode-mounting-212915-unauthRole",
+            "StackName": "amplify-mountingcode-mounting-212915",
+            "StackId": "arn:aws:cloudformation:us-east-1:854193618465:stack/amplify-mountingcode-mounting-212915/2e6572f0-8b4b-11ea-8d0a-0ef7f3f34731",
+            "AmplifyAppId": "d2d3bulm9yn7tw"
+        }
+    }
+}
