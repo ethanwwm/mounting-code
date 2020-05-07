@@ -12,24 +12,29 @@ import { Link } from "@reach/router";
 import { Parallax } from "react-scroll-parallax";
 
 const LoadingScreen = ({ loading }) => {
-  if (loading)
-    return (
-      <div className="loading-div-active">
-        <div className="loading-text-active">
-          <Fade top>
-            <h1>e.</h1>
-          </Fade>
-        </div>
+  // if (loading)
+  return (
+    <div className="temp">
+      <div className="temp-text">
+        <h1>e.</h1>
       </div>
-    );
-  else
-    return (
-      <div className="loading-div-inactive">
-        <div className="loading-text-inactive">
-          <h1>e.</h1>
-        </div>
-      </div>
-    );
+    </div>
+    // <div className="loading-div-active">
+    //   <div className="loading-text-active">
+    //     <Fade top>
+    //       <h1>e.</h1>
+    //     </Fade>
+    //   </div>
+    // </div>
+  );
+  // else
+  //   return (
+  //     <div className="loading-div-inactive">
+  //       <div className="loading-text-inactive">
+  //         <h1>e.</h1>
+  //       </div>
+  //     </div>
+  //   );
 };
 
 const ReturnLandingPage = () => {
@@ -98,7 +103,8 @@ const LandingPage = () => {
           <img src={arrowDown} className="arrow-down" alt="arrow" />
         </div>
       </div>
-      {unmount ? <LoadingScreen loading={loading} /> : <ReturnLandingPage />}
+      <LoadingScreen />
+      {/* {unmount ? <LoadingScreen loading={loading} /> : <ReturnLandingPage />} */}
     </React.Fragment>
   );
 };
