@@ -16,7 +16,9 @@ const LoadingScreen = ({ loading }) => {
   return (
     <div className="temp">
       <div className="temp-text">
-        <h1>e.</h1>
+        <Fade cascade top>
+          <h1>e.</h1>
+        </Fade>
       </div>
     </div>
     // <div className="loading-div-active">
