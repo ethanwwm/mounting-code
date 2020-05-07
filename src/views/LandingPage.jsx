@@ -14,13 +14,16 @@ import { Parallax } from "react-scroll-parallax";
 const LoadingScreen = ({ loading }) => {
   // if (loading)
   return (
-    <div className="temp">
-      <div className="temp-text">
-        <Fade cascade top>
-          <h1>e.</h1>
-        </Fade>
+    <Fade when={loading}>
+      <div className="temp">
+        <div className="temp-text">
+          <Fade cascade top>
+            <h1>e.</h1>
+          </Fade>
+        </div>
       </div>
-    </div>
+    </Fade>
+
     // <div className="loading-div-active">
     //   <div className="loading-text-active">
     //     <Fade top>
@@ -105,8 +108,8 @@ const LandingPage = () => {
           <img src={arrowDown} className="arrow-down" alt="arrow" />
         </div>
       </div>
-      <LoadingScreen />
-      {/* {unmount ? <LoadingScreen loading={loading} /> : <ReturnLandingPage />} */}
+      {/* <LoadingScreen /> */}
+      {unmount ? <LoadingScreen loading={loading} /> : <ReturnLandingPage />}
     </React.Fragment>
   );
 };
