@@ -16,9 +16,9 @@ const LoadingScreen = ({ loading }) => {
     return (
       <div className="loading-div-active">
         <div className="loading-text-active">
-          {/* <Fade top> */}
-          <h1>e.</h1>
-          {/* </Fade> */}
+          <Fade top>
+            <h1>e.</h1>
+          </Fade>
         </div>
       </div>
     );
