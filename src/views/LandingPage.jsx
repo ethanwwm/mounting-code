@@ -23,23 +23,7 @@ const LoadingScreen = ({ loading }) => {
         </div>
       </div>
     </Fade>
-
-    // <div className="loading-div-active">
-    //   <div className="loading-text-active">
-    //     <Fade top>
-    //       <h1>e.</h1>
-    //     </Fade>
-    //   </div>
-    // </div>
   );
-  // else
-  //   return (
-  //     <div className="loading-div-inactive">
-  //       <div className="loading-text-inactive">
-  //         <h1>e.</h1>
-  //       </div>
-  //     </div>
-  //   );
 };
 
 const ReturnLandingPage = () => {
@@ -78,7 +62,7 @@ const LandingPage = () => {
           <Fade top cascade>
             <div>
               <h1 className="headline">
-                Solving problems one at a time with fluid code.
+                Solving problems one at a time with fluid code. Tim
               </h1>
             </div>
 
