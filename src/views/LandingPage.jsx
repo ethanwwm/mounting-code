@@ -62,7 +62,7 @@ const LandingPage = () => {
           <Fade top cascade>
             <div>
               <h1 className="headline">
-                Solving problems one at a time with fluid code. Tim
+                Solving problems one at a time with fluid code.
               </h1>
             </div>
 
