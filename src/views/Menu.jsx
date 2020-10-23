@@ -6,9 +6,6 @@ import { Fade } from "react-reveal";
 const Menu = () => {
   return (
     <div className="menu">
-      {/* <NavLink to="/" exact>
-          <div className="mobile-click-to-main"></div>
-        </NavLink> */}
       <Fade right>
         <div className="text">
           <NavLink to="/" exact>
@@ -20,9 +17,13 @@ const Menu = () => {
           <NavLink to="/aboutme" exact>
             <h1>About</h1>
           </NavLink>
-          <NavLink to="/menu" exact>
-            <h1>Contact</h1>
-          </NavLink>
+          <h1
+            onClick={() => {
+              window.location.href = "mailto:ethanwwm@email.com";
+            }}
+          >
+            Contact
+          </h1>
         </div>
       </Fade>
     </div>

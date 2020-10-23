@@ -19,8 +19,6 @@ import { CSSTransition } from "react-transition-group";
 const pageTransition = (node) => {
   var tl = gsap.timeline();
 
-  console.log(node.children[0]);
-
   tl.to(".loading-screen", {
     duration: 1,
     width: "100%",
