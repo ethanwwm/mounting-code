@@ -1,100 +1,115 @@
 import React, { useState } from "react";
-import Project from "./Project";
-import Footer from "../components/Footer";
-import Values from "./Values";
-import Fade from "react-reveal/Fade";
-import "../styles/LandingPage.css";
+import "../styles/LandingPage.scss";
 import "../styles/LoadingScreen.css";
-import backgroundImg from "../assets/background.png";
-import arrowDown from "../assets/arrow-down.png";
-import animateScrollTo from "animated-scroll-to";
-import { Link } from "@reach/router";
-import { Parallax } from "react-scroll-parallax";
+import { NavLink } from "react-router-dom";
+import anime from "animejs/lib/anime.es.js";
+import { Fade } from "react-reveal";
 
-const LoadingScreen = ({ loading }) => {
-  // if (loading)
+const Navbar = () => {
   return (
-    <Fade when={loading}>
-      <div className="temp">
-        <div className="temp-text">
-          <Fade cascade top>
-            <h1>e.</h1>
-          </Fade>
+    <Fade top cascade>
+      <div className="navbar">
+        <p className="green">home</p>
+
+        <NavLink to="/projects" exact>
+          <div className="hover-div">
+            <p>projects</p>
+          </div>
+        </NavLink>
+        <NavLink to="/aboutme" exact>
+          <div className="hover-div">
+            <p>about me</p>
+          </div>
+        </NavLink>
+
+        <div
+          className="hover-div"
+          onClick={() => {
+            window.location.href = "mailto:ethanwwm@email.com";
+          }}
+        >
+          <p>contact me</p>
         </div>
       </div>
     </Fade>
   );
 };
 
-const ReturnLandingPage = () => {
+const Banner = () => {
   return (
     <React.Fragment>
-      <Values />
-      <Project />
-      <Footer />
+      <div className="banner">
+        <Fade left cascade>
+          <div
+            className="title animate-this"
+            onClick={() => {
+              document.querySelector(".footer").className = "footer selected";
+            }}
+          >
+            <h1>Hello.</h1>
+
+            <h1 className="name">
+              I'm <br />
+              Ethan
+              <br /> Wong.
+            </h1>
+          </div>
+        </Fade>
+      </div>
+      <Navbar />
     </React.Fragment>
   );
 };
 
-const LandingPage = () => {
-  const [loading, setLoading] = useState(1);
-  const [unmount, setUnmount] = useState(1);
-
-  setTimeout(() => {
-    setLoading(0);
-  }, 3000);
-
-  setTimeout(() => {
-    setUnmount(0);
-  }, 4000);
-
+const Footer = () => {
   return (
-    <React.Fragment>
-      <div className="landing-page-parent">
-        <Fade>
-          <img
-            src={backgroundImg}
-            className="background-img"
-            alt="background"
-          />
-        </Fade>
-        <Parallax y={[-40, 40]}>
-          <Fade top cascade>
-            <div>
-              <h1 className="headline">
-                Solving problems one at a time with fluid code.
-              </h1>
-            </div>
-
-            <div>
-              <p className="caption">
-                Websites and tools with a focus on scalability and
-                responsiveness.
-              </p>
-            </div>
-
-            <div className="button-div">
-              <div className="about-me-button-div">
-                <Link to="aboutme">
-                  <h3>About me</h3>
-                </Link>
-              </div>
-            </div>
-          </Fade>
-        </Parallax>
+    <Fade right cascade>
+      <div className="footer">
         <div
-          className="arrow-div"
+          key="instagram"
+          className="social-link"
           onClick={() => {
-            animateScrollTo(document.querySelector(".values-div-parent"));
+            window.location.href = "https://instagram.com/ethanwong_/";
           }}
         >
-          <p>Projects</p>
-          <img src={arrowDown} className="arrow-down" alt="arrow" />
+          <div className="instagram svg"></div>
+        </div>
+
+        <div
+          key="github"
+          className="social-link"
+          onClick={() => {
+            window.href("https://github.com/ethanwwm");
+          }}
+        >
+          <div className="github svg"></div>
+        </div>
+
+        <div
+          key="linkedin"
+          className="social-link"
+          onClick={() => {
+            window.href("https://www.linkedin.com/in/ethan-wong-84b38952/");
+          }}
+        >
+          <div className="linkedin svg"></div>
         </div>
       </div>
-      {/* <LoadingScreen /> */}
-      {unmount ? <LoadingScreen loading={loading} /> : <ReturnLandingPage />}
-    </React.Fragment>
+    </Fade>
+  );
+};
+
+const LandingPage = () => {
+  return (
+    <div className="landing-page-parent">
+      <h1></h1>
+      <NavLink to="/menu" exact>
+        <div className="mobile-click-to-menu"></div>
+      </NavLink>
+      <Banner />
+      <Footer />
+      <p className="tap-anywhere">tap anywhere</p>
+    </div>
   );
 };
 
