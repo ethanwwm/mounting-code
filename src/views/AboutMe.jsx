@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/AboutMe.scss";
-import large_text from "../assets/large-text-about-me.svg";
+import large_text from "../assets/large-text-about-me.png";
 import portrait from "../assets/my-portrait.jpg";
 import rotating_text from "../assets/ETHAN.png";
 import background_graphic from "../assets/about-me-graphic.png";

@@ -1,5 +1,5 @@
 .menu {
-  background-color: #ff6969;
+  background-color: black;
   //   transition: background-color 1s linear;
   animation: background-fade-in 1s forwards;
   padding-right: calc(var(--mobile-padding) * 2);
@@ -10,12 +10,12 @@
   justify-content: flex-end;
 
   a {
-    color: white;
+    color: #69ff7a;
     text-decoration: none;
   }
 
   .text {
-    color: white;
+    color: #69ff7a;
     text-align: right;
     z-index: 10;
 
@@ -50,7 +50,7 @@
   }
 
   100% {
-    background-color: #ff6969;
+    background-color: black;
   }
 }
 
