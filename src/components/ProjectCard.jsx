@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import "../styles/ProjectCard.scss";
 import arrow from "../assets/circle-forward.svg";
 import gsap from "gsap";
-import Button from "../components/Button";
 
 const ProjectCard = ({ header, name, caption, company, year, link }) => {
   let letter1 = useRef(null);
@@ -20,15 +19,6 @@ const ProjectCard = ({ header, name, caption, company, year, link }) => {
         amount: 0.15,
       },
     });
-
-    // gsap.from([letter2], 0.8, {
-    //   delay: 1,
-    //   ease: "power3.inout",
-    //   y: -200,
-    //   stagger: {
-    //     amount: 0.15,
-    //   },
-    // });
   }, [letter1, letter2]);
 
   return (

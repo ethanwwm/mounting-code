@@ -8,47 +8,34 @@ class Cursor extends React.Component {
   }
 
   componentDidMount() {
-    const cursor = document.querySelector(".mouse-cursor");
-    const outer = document.querySelector(".outer-cursor");
-    const div = document.querySelector(".cursor-div");
-    // const arrow = document.querySelector(".circle-arrow");
+    const cursor = document.querySelector(".cursor");
 
-    // console.log(arrow);
+    if (window.screen.width > 575) {
+      document.addEventListener("mousemove", (e) => {
+        cursor.setAttribute(
+          "style",
+          "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+        );
+      });
 
-    // arrow.addEventListener("mouseover", (e) => {
-    //   console.log("MOUSEOVER");
-    //   cursor.setAttribute("style", "height: 50px; width: 50px");
-    // });
+      document.addEventListener("click", () => {
+        cursor.classList.add("expand");
 
-    document.addEventListener("mousemove", (e) => {
-      cursor.setAttribute(
-        "style",
-        "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
-      );
-    });
+        setTimeout(() => {
+          cursor.classList.remove("expand");
+        }, 500);
+      });
 
-    document.addEventListener("mousemove", (e) => {
-      outer.setAttribute(
-        "style",
-        "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
-      );
-    });
-
-    document.addEventListener("mousemove", (e) => {
-      div.setAttribute(
-        "style",
-        "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
-      );
-    });
+      window.onscroll = function () {
+        cursor.setAttribute("style", "opacity: 0;");
+      };
+    } else {
+      cursor.setAttribute("style", "opacity: 0;");
+    }
   }
 
   render() {
-    return (
-      <div className="cursor-div">
-        <div className="mouse-cursor"></div>
-        <div className="outer-cursor"></div>
-      </div>
-    );
+    return <div class="cursor"></div>;
   }
 }
 

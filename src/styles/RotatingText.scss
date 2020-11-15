@@ -1,0 +1,23 @@
+.rotating-text {
+  top: -50px;
+  width: 220px;
+  position: fixed !important;
+  right: -60px;
+  animation: spin 20s infinite linear;
+  z-index: 1;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .rotating-text {
+    width: 160px;
+  }
+}

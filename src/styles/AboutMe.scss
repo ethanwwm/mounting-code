@@ -1,10 +1,32 @@
 .about-me {
-  padding: 0 var(--large-padding);
+  // padding: 0 var(--large-padding);
   text-align: left;
   height: 100vh;
   max-width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   background-color: #f5f5f5;
+
+  .centered-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .footer-div-about {
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
 
   .large-text {
     // transform: rotate(-90deg);
@@ -41,23 +63,31 @@
     animation: spin 20s infinite linear;
   }
 
-  .footer {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
+  .footer-about {
+    // position: fixed;
+    // bottom: 60px;
+    // right: 20px;
+    display: flex;
+    margin-top: 50px;
 
     .social-link {
       display: flex;
-      align-items: right;
+      align-items: center;
+      justify-content: center;
       margin: 0 1.25em;
-      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      //cursor: pointer;
+      padding: 3px;
+      border: solid 1px #4192ff;
+      border-radius: 10px;
     }
 
     .svg {
-      height: 30px;
-      width: 30px;
-      background-color: black;
-      margin-top: 30px;
+      height: 20px;
+      width: 20px;
+      background-color: #4192ff;
+      // margin-top: 30px;
     }
 
     .instagram {
@@ -106,6 +136,178 @@
   }
 }
 
+.question {
+  background-color: #f5f5f5;
+  width: 100vw;
+  // padding: 0 80px;
+  margin-top: -5vh;
+  .lora {
+    margin: 0;
+    width: 640px;
+    font-family: Lora;
+    margin-left: 210px;
+  }
+  .paragraphs {
+    width: 500px;
+    margin-top: 40px;
+    margin-left: 300px;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+.reviews {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 200px;
+
+  h1 {
+    font-family: Lora;
+    margin: 0 70px;
+    text-align: center;
+  }
+
+  .single-review {
+    width: 280px;
+    margin-top: 40px;
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    .company {
+      color: #919191;
+    }
+  }
+}
+
+.text-area-2 {
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: 150vh;
+  // position: absolute;
+  // top: 70%;
+  margin-top: -30vh;
+  display: flex;
+  justify-content: center;
+
+  .relative-div {
+    position: relative;
+    display: flex;
+    // height: 200vh;
+    width: 80vw;
+    justify-content: center;
+    .gradient {
+      // margin-left: 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .center {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 15%;
+      // width: 100vw;
+      .large-text {
+        h1 {
+          margin: 0;
+          // margin-left: 60px;
+          font-size: 120px;
+          line-height: 120px;
+          font-weight: 400;
+          letter-spacing: -5px;
+        }
+
+        .first-paragraph {
+          width: 400px;
+          margin-top: 70px;
+        }
+
+        .next-paragraph {
+          width: 400px;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .profile-pic {
+      position: absolute;
+      bottom: 0;
+      right: 50px;
+      border-radius: 20px;
+    }
+  }
+}
+
+#download-button {
+  position: fixed;
+  display: flex;
+  border: 2px solid #4192ff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  top: 42px;
+  left: 60px;
+  z-index: 1;
+  //cursor: pointer;
+  transition: 0.5s;
+
+  p {
+    font-weight: 300;
+    margin: 0 10px 0 0;
+    color: #4192ff;
+    transition: 0.5s;
+  }
+}
+
+#download-button:hover {
+  background: #4192ff;
+  transition: 0.3s;
+  transform: rotate(-5deg);
+
+  p {
+    color: white;
+    transition: 0.3s;
+  }
+}
+
+.download-button-gradient {
+  // position: fixed;
+  //cursor: pointer;
+  display: flex;
+  margin-top: 40px;
+  background: linear-gradient(
+    155deg,
+    rgba(65, 146, 255, 1) 8%,
+    rgba(244, 170, 229, 1) 130%
+  );
+  transition: 0.3s;
+
+  // border: 2px solid #4192ff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  top: 42px;
+  left: 60px;
+  z-index: 1;
+  width: fit-content;
+
+  .text {
+    font-weight: 300;
+    margin: 0 10px 0 0;
+    color: white;
+  }
+}
+
+.download-button-gradient:hover {
+  transform: rotate(15deg);
+  transition: 0.3s;
+}
+
 .text-area {
   height: 100vh;
   max-width: 100vw;
@@ -141,33 +343,117 @@
 }
 
 @media (max-width: 1199.98px) {
-}
+  .text-area-2 {
+    .relative-div {
+      width: 90vw;
 
-// Medium devices (tablets, 768px and up)
-@media (max-width: 991.98px) {
-  .about-me {
-    padding: 0 var(--small-padding);
+      .profile-pic {
+        right: 0;
+      }
+    }
+  }
 
-    .large-text {
-      left: calc(var(--small-padding) - 38px);
+  .question {
+    .lora {
+      margin-left: 120px;
+    }
+
+    .paragraphs {
+      margin-left: 210px;
     }
   }
 }
 
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991.98px) {
+  .text-area-2 {
+    .relative-div {
+      .gradient {
+        width: 90vw;
+        left: unset;
+      }
+    }
+  }
+  .question {
+    .lora {
+      width: 460px;
+      margin-left: 80px;
+    }
+
+    .paragraphs {
+      margin-left: 150px;
+    }
+  }
+
+  #download-button {
+    display: none;
+  }
+}
+
 @media (max-width: 767.98px) {
-  .text-area {
-    padding: 0 var(--small-padding);
-    justify-content: left;
-
-    .text {
-      h2 {
-        width: 500px;
+  .text-area-2 {
+    height: unset;
+    .relative-div {
+      flex-direction: column;
+      justify-content: unset;
+      align-items: center;
+      .gradient {
+        position: unset;
+        height: fit-content;
+        width: 60vw;
       }
-
-      p {
-        width: 300px;
-        margin-left: 0;
+      .profile-pic {
+        display: none;
       }
+      .center {
+        position: unset;
+        margin-top: -260px;
+
+        .large-text {
+          h1 {
+            margin: 0;
+            font-size: 90px;
+            line-height: 90px;
+            font-weight: 400;
+            letter-spacing: -3px;
+          }
+
+          .first-paragraph {
+            width: unset;
+          }
+
+          .next-paragraph {
+            width: unset;
+          }
+        }
+      }
+    }
+  }
+
+  .question {
+    margin-top: unset;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .lora {
+      width: 90vw;
+      margin: 0;
+    }
+
+    .paragraphs {
+      margin-left: 0;
+      width: 90vw;
+    }
+  }
+
+  .reviews {
+    // width: 90vw;
+
+    h1 {
+      width: 90vw;
+      margin: 0;
     }
   }
 }
@@ -175,63 +461,57 @@
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 575.98px) {
   .about-me {
-    padding: calc(var(--mobile-padding));
-    display: flex;
-    // justify-content: center;
-    // align-items: center;
-    flex-direction: column;
-    height: 100%;
-    max-width: 100vw;
-    overflow: unset;
-
-    .navigation {
-      padding-left: 0;
-    }
-
-    .rotating-text {
-      width: 200px;
-      opacity: 0.5;
-      z-index: 0;
-    }
-
-    .portrait {
-      position: inherit;
-      height: fit-content;
-      width: fit-content;
-      padding: 0;
-      overflow: unset;
-      transform: unset;
-      margin-top: 50px;
-
-      img {
-        max-width: 100%;
+    .footer-about {
+      .social-link {
+        margin: 0 10px;
       }
     }
+  }
+  .text-area-2 {
+    margin-top: 0;
+    .relative-div {
+      .gradient {
+        display: none;
+      }
+      .center {
+        margin-top: 0;
+        .large-text {
+          h1 {
+            font-size: calc(var(--h1) * 0.75);
+            line-height: 60px;
+            letter-spacing: -2px;
+          }
 
-    .large-text {
-      left: 0;
-      position: unset;
-      width: fit-content;
-
-      img {
-        width: 80vw;
+          .first-paragraph {
+            margin-top: 20px;
+          }
+        }
       }
     }
   }
 
-  .text-area {
-    height: 100%;
-    max-width: 100vw;
-    padding: 0 var(--mobile-padding);
-    padding-bottom: 100px;
+  .reviews {
+    h1 {
+      text-align: left;
+    }
 
-    .text {
+    .single-review {
+      width: 90vw;
+      margin-top: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: #0000000a 0px 12px 20px;
+
       h2 {
-        width: 100%;
+        margin: 0 20px;
       }
 
       p {
-        width: 100%;
+        margin: 20px;
+      }
+
+      img {
+        margin: 20px 0 0 20px;
       }
     }
   }

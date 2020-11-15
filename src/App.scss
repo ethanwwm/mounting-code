@@ -1,7 +1,11 @@
 @import "./styles/global/css-variables.scss";
 
 .App {
-  // text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
 }
 
 .loading-screen {
@@ -9,7 +13,7 @@
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  background-color: #69ff7a;
+  background-color: #539dff;
   width: 0%;
   height: 100%;
   z-index: 10;
@@ -26,40 +30,79 @@
   pointer-events: none;
 }
 
+.get-a-laptop {
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    color: white;
+    text-align: center;
+  }
+
+  img {
+    max-width: 90vw;
+  }
+
+  .alright {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    p {
+      color: black;
+      margin: 0;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+}
+
 @font-face {
   font-family: Manrope;
   font-weight: 100;
-  src: url("./assets/fonts/Manrope-ExtraLight.otf") format("opentype");
+  src: url("./assets/fonts/manrope/Manrope-ExtraLight.otf") format("opentype");
 }
 
 @font-face {
   font-family: Manrope;
   font-weight: 150;
-  src: url("./assets/fonts/Manrope-Light.otf") format("opentype");
+  src: url("./assets/fonts/manrope/Manrope-Light.otf") format("opentype");
 }
 
 @font-face {
   font-family: Manrope;
   font-weight: 200;
-  src: url("./assets/fonts/Manrope-Regular.otf") format("opentype");
+  src: url("./assets/fonts/manrope/Manrope-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: Manrope;
   font-weight: 300;
-  src: url("./assets/fonts/Manrope-Medium.otf") format("opentype");
+  src: url("./assets/fonts/manrope/Manrope-Medium.otf") format("opentype");
 }
 
 @font-face {
   font-family: Manrope;
   font-weight: 400;
-  src: url("./assets/fonts/Manrope-Bold.otf") format("opentype");
+  src: url("./assets/fonts/manrope/Manrope-Bold.otf") format("opentype");
 }
 
 @font-face {
   font-family: Manrope;
   font-weight: 450;
-  src: url("./assets/fonts/Manrope-ExtraBold.otf") format("opentype");
+  src: url("./assets/fonts/manrope/Manrope-ExtraBold.otf") format("opentype");
+}
+
+//LORA
+@font-face {
+  font-family: Lora;
+  font-weight: 100;
+  src: url("./assets/fonts/lora/Lora-Regular.ttf") format("truetype");
 }
 
 body {
@@ -88,6 +131,21 @@ p {
   background: #419be0;
 }
 
+#logo {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  transition: 0.7s;
+
+  p {
+    color: #434343;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
 .slick-slide img {
   margin: auto;
 }
@@ -99,7 +157,6 @@ p {
 .page-enter-active {
   opacity: 1;
   transition: opacity 400ms;
-  // transition-delay: 600ms;
 }
 
 .page-exit {
@@ -113,19 +170,48 @@ p {
 
 .navigation {
   margin: 50px 0;
-  cursor: default;
   .home {
     color: #9f9f9f;
-    cursor: pointer;
+    cursor: none;
     transition: 0.3s;
   }
 
   .home:hover {
-    color: #69ff7a;
-    cursor: pointer;
+    color: #4192ff;
+    cursor: none;
     transition: 0.3s;
   }
   p {
     font-weight: 150;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #logo {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: calc(var(--h1) * 0.75);
+  }
+  h2 {
+    font-size: calc(var(--h2) * 0.75);
+    line-height: 40px;
+  }
+
+  p {
+    font-size: calc(var(--p) * 0.75);
+  }
+
+  .hamburger-menu {
+    display: inline;
   }
 }

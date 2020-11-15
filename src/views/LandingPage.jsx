@@ -1,115 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/LandingPage.scss";
 import "../styles/LoadingScreen.css";
 import { NavLink } from "react-router-dom";
 import anime from "animejs/lib/anime.es.js";
 import { Fade } from "react-reveal";
-
-const Navbar = () => {
-  return (
-    <Fade top cascade>
-      <div className="navbar">
-        <p className="green">home</p>
-
-        <NavLink to="/projects" exact>
-          <div className="hover-div">
-            <p>projects</p>
-          </div>
-        </NavLink>
-        <NavLink to="/aboutme" exact>
-          <div className="hover-div">
-            <p>about me</p>
-          </div>
-        </NavLink>
-
-        <div
-          className="hover-div"
-          onClick={() => {
-            window.location.href = "mailto:ethanwwm@email.com";
-          }}
-        >
-          <p>contact me</p>
-        </div>
-      </div>
-    </Fade>
-  );
-};
-
-const Banner = () => {
-  return (
-    <React.Fragment>
-      <div className="banner">
-        <Fade left cascade>
-          <div
-            className="title animate-this"
-            onClick={() => {
-              document.querySelector(".footer").className = "footer selected";
-            }}
-          >
-            <h1>Hello.</h1>
-
-            <h1 className="name">
-              I'm <br />
-              Ethan
-              <br /> Wong.
-            </h1>
-          </div>
-        </Fade>
-      </div>
-      <Navbar />
-    </React.Fragment>
-  );
-};
-
-const Footer = () => {
-  return (
-    <Fade right cascade>
-      <div className="footer">
-        <div
-          key="instagram"
-          className="social-link"
-          onClick={() => {
-            window.location.href = "https://instagram.com/ethanwong_/";
-          }}
-        >
-          <div className="instagram svg"></div>
-        </div>
-
-        <div
-          key="github"
-          className="social-link"
-          onClick={() => {
-            window.href("https://github.com/ethanwwm");
-          }}
-        >
-          <div className="github svg"></div>
-        </div>
-
-        <div
-          key="linkedin"
-          className="social-link"
-          onClick={() => {
-            window.href("https://www.linkedin.com/in/ethan-wong-84b38952/");
-          }}
-        >
-          <div className="linkedin svg"></div>
-        </div>
-      </div>
-    </Fade>
-  );
-};
+import Footer from "../components/Footer";
+import Navbar from "../components/Header";
+import graphic from "../assets/landing-page-gradient.svg";
+import arrow_right from "../assets/arrow-right.svg";
 
 const LandingPage = () => {
   return (
-    <div className="landing-page-parent">
-      <h1></h1>
-      <NavLink to="/menu" exact>
-        <div className="mobile-click-to-menu"></div>
-      </NavLink>
-      <Banner />
-      <Footer />
-      <p className="tap-anywhere">tap anywhere</p>
-    </div>
+    <React.Fragment>
+      <Navbar />
+      <div className="landing-page-parent">
+        {graphic ? (
+          <Fade top>
+            <img className="graphic" src={graphic} alt="graphic" />
+          </Fade>
+        ) : undefined}
+        <Fade cascade>
+          <div className="landing-text-area">
+            <h1 className="large-text">
+              Let's solve your problem
+              <br />
+              with design.
+            </h1>
+            <h2>
+              Hi there. I’m Ethan Wong, a design + purpose driven UI/UX designer
+              and developer.
+            </h2>
+            <div className="buttons">
+              <NavLink to="/projects" exact>
+                <div className="gradient-button">
+                  <p>View Projects</p>
+                  <img src={arrow_right} alt="" className="arrow-right" />
+                </div>
+              </NavLink>
+
+              <div
+                className="outline-button"
+                onClick={() => {
+                  window.location.href = "mailto:ethanwwm@email.com";
+                }}
+              >
+                <p>Let's talk!</p>
+              </div>
+            </div>
+          </div>
+        </Fade>
+
+        <div className="footer-div">
+          <Footer />
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
