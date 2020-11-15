@@ -25,17 +25,13 @@ class Cursor extends React.Component {
           cursor.classList.remove("expand");
         }, 500);
       });
-
-      window.onscroll = function () {
-        cursor.setAttribute("style", "opacity: 0;");
-      };
     } else {
       cursor.setAttribute("style", "opacity: 0;");
     }
   }
 
   render() {
-    return <div class="cursor"></div>;
+    return <div className="cursor"></div>;
   }
 }
 

@@ -16,6 +16,11 @@ import moira from "./assets/moira.gif";
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   let downloadButton = document.getElementById("download-button");
+  const cursor = document.querySelector(".cursor");
+
+  if (cursor) {
+    cursor.setAttribute("style", "opacity: 0;");
+  }
 
   // 20 is an arbitrary number here, just to make you think if you need the prevScrollpos variable:
   if (currentScrollPos > 20) {
@@ -31,7 +36,10 @@ window.onscroll = function () {
     downloadButton.style.top = "42px";
   }
 
+  console.log(window.screen.width, "HELLO");
+
   if (window.screen.width <= 1199 && window.screen.width > 575) {
+    console.log("triggered");
     let navbar = document.getElementById("navbar");
     if (currentScrollPos > 20) {
       // I am using 'display' instead of 'top':
