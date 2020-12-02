@@ -111,7 +111,7 @@ const Hamburger = () => {
             key="github"
             className="social-link"
             onClick={() => {
-              window.href("https://github.com/ethanwwm");
+              window.location.href = "https://github.com/ethanwwm";
             }}
           >
             <div className="github svg"></div>
@@ -121,7 +121,7 @@ const Hamburger = () => {
             key="linkedin"
             className="social-link"
             onClick={() => {
-              window.href("https://www.linkedin.com/in/ethan-wong-84b38952/");
+              window.location.href = "https://www.linkedin.com/in/ethan-wong-84b38952/";
             }}
           >
             <div className="linkedin svg"></div>

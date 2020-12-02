@@ -31,7 +31,7 @@ const Footer = () => {
           key="github"
           className="social-link"
           onClick={() => {
-            window.href("https://github.com/ethanwwm");
+            window.location.href = "https://github.com/ethanwwm";
           }}
         >
           <img src="https://firebasestorage.googleapis.com/v0/b/mounting-ethanwwm.appspot.com/o/blue-github.svg?alt=media&token=97d849b1-a749-4d1b-b8e8-e02b4a515b49" alt=""/>
@@ -41,7 +41,7 @@ const Footer = () => {
           key="linkedin"
           className="social-link"
           onClick={() => {
-            window.href("https://www.linkedin.com/in/ethan-wong-84b38952/");
+            window.location.href ="https://www.linkedin.com/in/ethan-wong-84b38952/";
           }}
         >
           <img src="https://firebasestorage.googleapis.com/v0/b/mounting-ethanwwm.appspot.com/o/blue-linkedin.svg?alt=media&token=1c9f66d8-99d7-493d-996f-fb9ca5431016" alt=""/>

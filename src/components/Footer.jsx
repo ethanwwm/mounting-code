@@ -20,7 +20,7 @@ const Footer = () => {
           key="github"
           className="social-link"
           onClick={() => {
-            window.href("https://github.com/ethanwwm");
+            window.location.href ="https://github.com/ethanwwm";
           }}
         >
           <img src="https://firebasestorage.googleapis.com/v0/b/mounting-ethanwwm.appspot.com/o/github.svg?alt=media&token=bfc09014-f19d-4c36-8f15-335d4b52958a" alt=""/>
@@ -30,7 +30,7 @@ const Footer = () => {
           key="linkedin"
           className="social-link"
           onClick={() => {
-            window.href("https://www.linkedin.com/in/ethan-wong-84b38952/");
+            window.location.href ="https://www.linkedin.com/in/ethan-wong-84b38952/";
           }}
         >
           <img src="https://firebasestorage.googleapis.com/v0/b/mounting-ethanwwm.appspot.com/o/linkedin.svg?alt=media&token=6942ca2d-15cc-4f87-9e8a-8bd1cb1e388b" alt=""/>

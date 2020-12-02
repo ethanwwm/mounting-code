@@ -88,4 +88,13 @@
     margin: 0;
     border-bottom: 1px solid #dedede;
   }
+
+  .project-card:hover {
+    background-color: white;
+    color: black;
+
+    img {
+      filter: unset;
+    }
+  }
 }
