@@ -62,51 +62,51 @@ a {
   }
 }
 
-@font-face {
-  font-family: Manrope;
-  font-weight: 100;
-  src: url("./assets/fonts/manrope/Manrope-ExtraLight.otf") format("opentype");
-}
+// @font-face {
+//   font-family: Manrope;
+//   font-weight: 100;
+//   // src: url("./assets/fonts/manrope/Manrope-ExtraLight.otf") format("opentype");
+// }
 
-@font-face {
-  font-family: Manrope;
-  font-weight: 150;
-  src: url("./assets/fonts/manrope/Manrope-Light.otf") format("opentype");
-}
+// @font-face {
+//   font-family: Manrope;
+//   font-weight: 150;
+//   // src: url("./assets/fonts/manrope/Manrope-Light.otf") format("opentype");
+// }
 
-@font-face {
-  font-family: Manrope;
-  font-weight: 200;
-  src: url("./assets/fonts/manrope/Manrope-Regular.otf") format("opentype");
-}
+// @font-face {
+//   font-family: Manrope;
+//   font-weight: 200;
+//   src: url("./assets/fonts/manrope/Manrope-Regular.otf") format("opentype");
+// }
 
-@font-face {
-  font-family: Manrope;
-  font-weight: 300;
-  src: url("./assets/fonts/manrope/Manrope-Medium.otf") format("opentype");
-}
+// @font-face {
+//   font-family: Manrope;
+//   font-weight: 300;
+//   src: url("./assets/fonts/manrope/Manrope-Medium.otf") format("opentype");
+// }
 
-@font-face {
-  font-family: Manrope;
-  font-weight: 400;
-  src: url("./assets/fonts/manrope/Manrope-Bold.otf") format("opentype");
-}
+// @font-face {
+//   font-family: Manrope;
+//   font-weight: 400;
+//   src: url("./assets/fonts/manrope/Manrope-Bold.otf") format("opentype");
+// }
 
-@font-face {
-  font-family: Manrope;
-  font-weight: 450;
-  src: url("./assets/fonts/manrope/Manrope-ExtraBold.otf") format("opentype");
-}
+// @font-face {
+//   font-family: Manrope;
+//   font-weight: 450;
+//   src: url("./assets/fonts/manrope/Manrope-ExtraBold.otf") format("opentype");
+// }
 
 //LORA
-@font-face {
-  font-family: Lora;
-  font-weight: 100;
-  src: url("./assets/fonts/lora/Lora-Regular.ttf") format("truetype");
-}
+// @font-face {
+//   font-family: Lora;
+//   font-weight: 100;
+//   src: url("./assets/fonts/lora/Lora-Regular.ttf") format("truetype");
+// }
 
 body {
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
 }
 
 h1 {
