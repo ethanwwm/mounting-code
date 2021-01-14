@@ -169,12 +169,15 @@
     }
     .buttons {
       .gradient-button {
-        width: 115px;
+        width: 145px;
+        height: 40px;
         padding: 6px 15px;
       }
 
       .outline-button {
         padding: 4px 0px;
+        height: 40px;
+        width: 170px;
       }
     }
   }

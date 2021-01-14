@@ -241,6 +241,7 @@
       bottom: 0;
       right: 50px;
       border-radius: 20px;
+      max-width: 330px;
     }
   }
 }
@@ -478,8 +479,9 @@
         .large-text {
           h1 {
             font-size: calc(var(--h1) * 0.75);
-            line-height: 60px;
-            letter-spacing: -2px;
+            line-height: 50px;
+            letter-spacing: -1px;
+            font-weight: 500;
           }
 
           .first-paragraph {
