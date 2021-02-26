@@ -9,21 +9,24 @@ import Navbar from "../components/Header";
 import graphic from "../assets/landing-page-gradient.svg";
 import arrow_right from "../assets/arrow-right.svg";
 
-  // fetch('https://firebasestorage.googleapis.com/v0/b/mounting-ethanwwm.appspot.com/o/landing-page-gradient.svg?alt=media&token=070e018b-3a68-4d8f-9ef6-600a5aaf129c').then((res)=>{
-  //   console.log(res)
-  // }).catch(()=>{
-  //   console.log('failed to get')
-  // })
+// fetch('https://firebasestorage.googleapis.com/v0/b/mounting-ethanwwm.appspot.com/o/landing-page-gradient.svg?alt=media&token=070e018b-3a68-4d8f-9ef6-600a5aaf129c').then((res)=>{
+//   console.log(res)
+// }).catch(()=>{
+//   console.log('failed to get')
+// })
 
 const LandingPage = () => {
-
   return (
     <React.Fragment>
       <Navbar />
       <div className="landing-page-parent">
         {graphic ? (
           <Fade top>
-            <img className="graphic" src='https://firebasestorage.googleapis.com/v0/b/mounting-ethanwwm.appspot.com/o/landing-page-gradient.svg?alt=media&token=070e018b-3a68-4d8f-9ef6-600a5aaf129c' alt="graphic" />
+            <img
+              className="graphic"
+              src="https://firebasestorage.googleapis.com/v0/b/mounting-ethanwwm.appspot.com/o/landing-page-gradient.svg?alt=media&token=070e018b-3a68-4d8f-9ef6-600a5aaf129c"
+              alt="graphic"
+            />
           </Fade>
         ) : undefined}
         <Fade cascade>
@@ -48,7 +51,7 @@ const LandingPage = () => {
               <div
                 className="outline-button"
                 onClick={() => {
-                  window.location.href = "mailto:ethanwwm@email.com";
+                  window.location.href = "mailto:ethanwwm@gmail.com";
                 }}
               >
                 <p>Let's talk!</p>

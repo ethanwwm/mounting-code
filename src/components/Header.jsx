@@ -36,7 +36,7 @@ const Navbar = () => {
       <div
         className="hover-div"
         onClick={() => {
-          window.location.href = "mailto:ethanwwm@email.com";
+          window.location.href = "mailto:ethanwwm@gmail.com";
         }}
       >
         <p>contact me</p>

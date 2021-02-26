@@ -85,7 +85,7 @@ const Hamburger = () => {
               <h1
                 className="link"
                 onClick={() => {
-                  window.location.href = "mailto:ethanwwm@email.com";
+                  window.location.href = "mailto:ethanwwm@gmail.com";
                 }}
               >
                 Contact
@@ -121,7 +121,8 @@ const Hamburger = () => {
             key="linkedin"
             className="social-link"
             onClick={() => {
-              window.location.href = "https://www.linkedin.com/in/ethan-wong-84b38952/";
+              window.location.href =
+                "https://www.linkedin.com/in/ethan-wong-84b38952/";
             }}
           >
             <div className="linkedin svg"></div>

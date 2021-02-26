@@ -19,7 +19,7 @@ const Menu = () => {
           </NavLink>
           <h1
             onClick={() => {
-              window.location.href = "mailto:ethanwwm@email.com";
+              window.location.href = "mailto:ethanwwm@gmail.com";
             }}
           >
             Contact
